@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.1 on win32)" generated="20191227 14:01:27.285" rpa="false">
+<suite id="s1" name="Tc" source="E:\yushenTools\projectOne\tc">
+<suite id="s1-s1" name="Having-Classdata" source="E:\yushenTools\projectOne\tc\having-classdata">
+<kw name="Add Classroom" library="pylib.SchoolClassLib.School_class" type="setup">
+<doc>添加课程
+:param grade:   指明年级的id号
+:param name:    指明添加班级的名称
+:param studentlimi:     指明班级学生的人数上限
+:return:</doc>
+<arguments>
+<arg>1</arg>
+<arg>实验二班</arg>
+<arg>80</arg>
+</arguments>
+<msg timestamp="20191227 14:01:27.569" level="INFO">{'id': 292246, 'invitecode': '2922463628868', 'retcode': 0}</msg>
+<status status="PASS" starttime="20191227 14:01:27.468" endtime="20191227 14:01:27.569"></status>
+</kw>
+<suite id="s1-s1-s1" name="Add Class Two" source="E:\yushenTools\projectOne\tc\having-classdata\add_class_two">
+<suite id="s1-s1-s1-s1" name="Add Class Three" source="E:\yushenTools\projectOne\tc\having-classdata\add_class_two\add_class_three.robot">
+<test id="s1-s1-s1-s1-t1" name="添加班级3 - .tc000003">
+<kw name="Add Classroom" library="pylib.SchoolClassLib.School_class">
+<doc>添加课程
+:param grade:   指明年级的id号
+:param name:    指明添加班级的名称
+:param studentlimi:     指明班级学生的人数上限
+:return:</doc>
+<arguments>
+<arg>1</arg>
+<arg>实验二班</arg>
+<arg>80</arg>
+</arguments>
+<assign>
+<var>${addclass3}</var>
+</assign>
+<msg timestamp="20191227 14:01:27.666" level="INFO">{ 'reason': 'Traceback (most recent call last):\n'
+            '  File '
+            '"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", '
+            'line 542, in addClass\n'
+            '    school_class = '
+            'self._addClass(name,schoolid,gradeid,studentlimit)\n'
+            '  File '
+            '"/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", '
+            'line 531, in _addClass\n'
+            '    school_class.save()\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 710, in save\n'
+            '    force_update=force_update, update_fields=update_fields)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 738, in save_base\n'
+            '    updated = self._save_table(raw, cls, force_insert, '
+            'force_update, using, update_fields)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 822, in _save_table\n'
+            '    result = self._do_insert(cls._base_manager, using, fields, '
+            'update_pk, raw)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/base.py", '
+            'line 861, in _do_insert\n'
+            '    using=using, raw=raw)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/manager.py", '
+            'line 127, in manager_method\n'
+            '    return getattr(self.get_queryset(), name)(*args, **kwargs)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/query.py", '
+            'line 920, in _insert\n'
+            '    return '
+            'query.get_compiler(using=using).execute_sql(return_id)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/models/sql/compiler.py", '
+            'line 974, in execute_sql\n'
+            '    cursor.execute(sql, params)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", '
+            'line 64, in execute\n'
+            '    return self.cursor.execute(sql, params)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/utils.py", line '
+            '97, in __exit__\n'
+            '    six.reraise(dj_exc_type, dj_exc_value, traceback)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/backends/utils.py", '
+            'line 64, in execute\n'
+            '    return self.cursor.execute(sql, params)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/django/db/backends/mysql/base.py", '
+            'line 124, in execute\n'
+            '    return self.cursor.execute(query, args)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/MySQLdb/cursors.py", line '
+            '205, in execute\n'
+            '    self.errorhandler(self, exc, value)\n'
+            '  File '
+            '"/usr/local/lib/python2.7/site-packages/MySQLdb/connections.py", '
+            'line 36, in defaulterrorhandler\n'
+            '    raise errorclass, errorvalue\n'
+            'IntegrityError: (1062, "Duplicate entry '
+            "'\\xe5\\xae\\x9e\\xe9\\xaa\\x8c\\xe4\\xba\\x8c\\xe7\\x8f\\xad-783-1' "
+            'for key \'name\'")\n',
+  'retcode': 1}</msg>
+<msg timestamp="20191227 14:01:27.667" level="INFO">${addclass3} = {'reason': 'Traceback (most recent call last):\n  File "/home/yjyx/yijiao_src/yijiao_main/services/datamodel/schoolclass/models.py", line 542, in addClass\n    school_class = self._addClass(name,schoo...</msg>
+<status status="PASS" starttime="20191227 14:01:27.581" endtime="20191227 14:01:27.667"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$addclass3['retcode']==1</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.667" endtime="20191227 14:01:27.678"></status>
+</kw>
+<kw name="List Classroom" library="pylib.SchoolClassLib.School_class">
+<doc>列出课程
+:param gradeid: 年级的id号
+:return:</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<assign>
+<var>${listclass3}</var>
+</assign>
+<msg timestamp="20191227 14:01:27.766" level="INFO">{'gradeid': 1,
+ 'retcode': 0,
+ 'retlist': [{'grade__name': '七年级',
+              'id': 292245,
+              'invitecode': '2922455317435',
+              'name': '实验1班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292246,
+              'invitecode': '2922463628868',
+              'name': '实验二班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []}]}</msg>
+<msg timestamp="20191227 14:01:27.766" level="INFO">${listclass3} = {'gradeid': 1, 'retlist': [{'name': '实验1班', 'grade__name': '七年级', 'invitecode': '2922455317435', 'studentlimit': 80, 'studentnumber': 0, 'id': 292245, 'teacherlist': []}, {'name': '实验二班', 'grade__name...</msg>
+<status status="PASS" starttime="20191227 14:01:27.679" endtime="20191227 14:01:27.766"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$listclass3['retlist'][-1]</arg>
+</arguments>
+<assign>
+<var>${listclass3json}</var>
+</assign>
+<msg timestamp="20191227 14:01:27.768" level="INFO">${listclass3json} = {'name': '实验二班', 'grade__name': '七年级', 'invitecode': '2922463628868', 'studentlimit': 80, 'studentnumber': 0, 'id': 292246, 'teacherlist': []}</msg>
+<status status="PASS" starttime="20191227 14:01:27.767" endtime="20191227 14:01:27.768"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$listclass3json['name']=='实验二班'</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.769" endtime="20191227 14:01:27.770"></status>
+</kw>
+<status status="PASS" starttime="20191227 14:01:27.578" endtime="20191227 14:01:27.771" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191227 14:01:27.573" endtime="20191227 14:01:27.773"></status>
+</suite>
+<suite id="s1-s1-s1-s2" name="Add Class Two" source="E:\yushenTools\projectOne\tc\having-classdata\add_class_two\add_class_two.robot">
+<test id="s1-s1-s1-s2-t1" name="添加班级2 - tc000002">
+<kw name="Add Classroom" library="pylib.SchoolClassLib.School_class">
+<doc>添加课程
+:param grade:   指明年级的id号
+:param name:    指明添加班级的名称
+:param studentlimi:     指明班级学生的人数上限
+:return:</doc>
+<arguments>
+<arg>1</arg>
+<arg>实验三班</arg>
+<arg>80</arg>
+</arguments>
+<assign>
+<var>${addclass2}</var>
+</assign>
+<msg timestamp="20191227 14:01:27.869" level="INFO">{'id': 292248, 'invitecode': '2922480644005', 'retcode': 0}</msg>
+<msg timestamp="20191227 14:01:27.869" level="INFO">${addclass2} = {'invitecode': '2922480644005', 'retcode': 0, 'id': 292248}</msg>
+<status status="PASS" starttime="20191227 14:01:27.782" endtime="20191227 14:01:27.869"></status>
+</kw>
+<kw name="List Classroom" library="pylib.SchoolClassLib.School_class">
+<doc>列出课程
+:param gradeid: 年级的id号
+:return:</doc>
+<assign>
+<var>${listclass2}</var>
+</assign>
+<msg timestamp="20191227 14:01:27.967" level="INFO">{'gradeid': None,
+ 'retcode': 0,
+ 'retlist': [{'grade__name': '七年级',
+              'id': 292245,
+              'invitecode': '2922455317435',
+              'name': '实验1班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292246,
+              'invitecode': '2922463628868',
+              'name': '实验二班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292248,
+              'invitecode': '2922480644005',
+              'name': '实验三班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []}]}</msg>
+<msg timestamp="20191227 14:01:27.967" level="INFO">${listclass2} = {'gradeid': None, 'retlist': [{'name': '实验1班', 'grade__name': '七年级', 'invitecode': '2922455317435', 'studentlimit': 80, 'studentnumber': 0, 'id': 292245, 'teacherlist': []}, {'name': '实验二班', 'grade__n...</msg>
+<status status="PASS" starttime="20191227 14:01:27.870" endtime="20191227 14:01:27.967"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$listclass2['retlist'][-1]</arg>
+</arguments>
+<assign>
+<var>${findsjson}</var>
+</assign>
+<msg timestamp="20191227 14:01:27.970" level="INFO">${findsjson} = {'name': '实验三班', 'grade__name': '七年级', 'invitecode': '2922480644005', 'studentlimit': 80, 'studentnumber': 0, 'id': 292248, 'teacherlist': []}</msg>
+<status status="PASS" starttime="20191227 14:01:27.968" endtime="20191227 14:01:27.970"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${findsjson}</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.970" endtime="20191227 14:01:27.973"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>&amp;{findsjson}[id]</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.974" endtime="20191227 14:01:27.975"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findsjson['id']==$addclass2['id']</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.976" endtime="20191227 14:01:27.977"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findsjson['grade__name']=="七年级"</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.978" endtime="20191227 14:01:27.979"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findsjson['invitecode']==$addclass2['invitecode']</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.980" endtime="20191227 14:01:27.981"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findsjson['name']=='实验三班'</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.982" endtime="20191227 14:01:27.983"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findsjson['studentlimit']==80</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:27.984" endtime="20191227 14:01:27.985"></status>
+</kw>
+<status status="PASS" starttime="20191227 14:01:27.780" endtime="20191227 14:01:27.986" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191227 14:01:27.775" endtime="20191227 14:01:27.988"></status>
+</suite>
+<status status="PASS" starttime="20191227 14:01:27.569" endtime="20191227 14:01:27.990"></status>
+</suite>
+<status status="PASS" starttime="20191227 14:01:27.317" endtime="20191227 14:01:27.993"></status>
+</suite>
+<suite id="s1-s2" name="None-Data" source="E:\yushenTools\projectOne\tc\none-data">
+<kw name="Delete All Classroom" library="pylib.SchoolClassLib.School_class" type="setup">
+<doc>删除所有课程
+:return:</doc>
+<msg timestamp="20191227 14:01:28.460" level="INFO">{'gradeid': None,
+ 'retcode': 0,
+ 'retlist': [{'grade__name': '七年级',
+              'id': 292245,
+              'invitecode': '2922455317435',
+              'name': '实验1班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292246,
+              'invitecode': '2922463628868',
+              'name': '实验二班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292248,
+              'invitecode': '2922480644005',
+              'name': '实验三班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []}]}
+{'gradeid': None,
+ 'retcode': 0,
+ 'retlist': [{'grade__name': '七年级',
+              'id': 292245,
+              'invitecode': '2922455317435',
+              'name': '实验1班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292246,
+              'invitecode': '2922463628868',
+              'name': '实验二班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []},
+             {'grade__name': '七年级',
+              'id': 292248,
+              'invitecode': '2922480644005',
+              'name': '实验三班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []}]}
+{'gradeid': None, 'retcode': 0, 'retlist': []}</msg>
+<status status="PASS" starttime="20191227 14:01:27.999" endtime="20191227 14:01:28.460"></status>
+</kw>
+<suite id="s1-s2-s1" name="班级管理" source="E:\yushenTools\projectOne\tc\none-data\班级管理">
+<suite id="s1-s2-s1-s1" name="Addclass" source="E:\yushenTools\projectOne\tc\none-data\班级管理\addclass.robot">
+<test id="s1-s2-s1-s1-t1" name="添加班级1-tc000001">
+<kw name="Add Classroom" library="pylib.SchoolClassLib.School_class">
+<doc>添加课程
+:param grade:   指明年级的id号
+:param name:    指明添加班级的名称
+:param studentlimi:     指明班级学生的人数上限
+:return:</doc>
+<arguments>
+<arg>1</arg>
+<arg>实验1班</arg>
+<arg>80</arg>
+</arguments>
+<assign>
+<var>${addclassone}</var>
+</assign>
+<msg timestamp="20191227 14:01:28.655" level="INFO">{'id': 292249, 'invitecode': '2922492744929', 'retcode': 0}</msg>
+<msg timestamp="20191227 14:01:28.656" level="INFO">${addclassone} = {'invitecode': '2922492744929', 'retcode': 0, 'id': 292249}</msg>
+<status status="PASS" starttime="20191227 14:01:28.472" endtime="20191227 14:01:28.656"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${addclassone}</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.657" endtime="20191227 14:01:28.658"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$addclassone['retcode']==0</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.658" endtime="20191227 14:01:28.660"></status>
+</kw>
+<kw name="List Classroom" library="pylib.SchoolClassLib.School_class">
+<doc>列出课程
+:param gradeid: 年级的id号
+:return:</doc>
+<assign>
+<var>${listclass}</var>
+</assign>
+<msg timestamp="20191227 14:01:28.698" level="INFO">{'gradeid': None,
+ 'retcode': 0,
+ 'retlist': [{'grade__name': '七年级',
+              'id': 292249,
+              'invitecode': '2922492744929',
+              'name': '实验1班',
+              'studentlimit': 80,
+              'studentnumber': 0,
+              'teacherlist': []}]}</msg>
+<msg timestamp="20191227 14:01:28.699" level="INFO">${listclass} = {'gradeid': None, 'retlist': [{'name': '实验1班', 'grade__name': '七年级', 'invitecode': '2922492744929', 'studentlimit': 80, 'studentnumber': 0, 'id': 292249, 'teacherlist': []}], 'retcode': 0}</msg>
+<status status="PASS" starttime="20191227 14:01:28.661" endtime="20191227 14:01:28.699"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>$listclass['retlist'][0]</arg>
+</arguments>
+<assign>
+<var>${findone}</var>
+</assign>
+<msg timestamp="20191227 14:01:28.701" level="INFO">${findone} = {'name': '实验1班', 'grade__name': '七年级', 'invitecode': '2922492744929', 'studentlimit': 80, 'studentnumber': 0, 'id': 292249, 'teacherlist': []}</msg>
+<status status="PASS" starttime="20191227 14:01:28.699" endtime="20191227 14:01:28.701"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${findone}</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.702" endtime="20191227 14:01:28.704"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findone['id']==$addclassone['id']</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.705" endtime="20191227 14:01:28.706"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findone['invitecode']==$addclassone['invitecode']</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.707" endtime="20191227 14:01:28.709"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findone['name']=='实验1班'</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.709" endtime="20191227 14:01:28.711"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findone['grade__name']=='七年级'</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.712" endtime="20191227 14:01:28.713"></status>
+</kw>
+<kw name="Should Be True" library="BuiltIn">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>$findone['studentlimit']==80</arg>
+</arguments>
+<status status="PASS" starttime="20191227 14:01:28.714" endtime="20191227 14:01:28.715"></status>
+</kw>
+<status status="PASS" starttime="20191227 14:01:28.470" endtime="20191227 14:01:28.716" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20191227 14:01:28.465" endtime="20191227 14:01:28.718"></status>
+</suite>
+<status status="PASS" starttime="20191227 14:01:28.460" endtime="20191227 14:01:28.721"></status>
+</suite>
+<status status="PASS" starttime="20191227 14:01:27.994" endtime="20191227 14:01:28.725"></status>
+</suite>
+<status status="PASS" starttime="20191227 14:01:27.290" endtime="20191227 14:01:28.727"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0">Critical Tests</stat>
+<stat pass="3" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" id="s1" name="Tc">Tc</stat>
+<stat pass="2" fail="0" id="s1-s1" name="Having-Classdata">Tc.Having-Classdata</stat>
+<stat pass="2" fail="0" id="s1-s1-s1" name="Add Class Two">Tc.Having-Classdata.Add Class Two</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s1" name="Add Class Three">Tc.Having-Classdata.Add Class Two.Add Class Three</stat>
+<stat pass="1" fail="0" id="s1-s1-s1-s2" name="Add Class Two">Tc.Having-Classdata.Add Class Two.Add Class Two</stat>
+<stat pass="1" fail="0" id="s1-s2" name="None-Data">Tc.None-Data</stat>
+<stat pass="1" fail="0" id="s1-s2-s1" name="班级管理">Tc.None-Data.班级管理</stat>
+<stat pass="1" fail="0" id="s1-s2-s1-s1" name="Addclass">Tc.None-Data.班级管理.Addclass</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
