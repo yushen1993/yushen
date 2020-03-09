@@ -1,0 +1,58 @@
+{
+  "uid" : "e504663334a95257",
+  "name" : "test_add[1-1.0-2.0]",
+  "fullName" : "test_three#test_add",
+  "historyId" : "6f44fdc78eda5880cf48220a23eb68f3",
+  "time" : {
+    "start" : 1583300086110,
+    "stop" : 1583300087110,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_three"
+  }, {
+    "name" : "host",
+    "value" : "rongyi-yotng"
+  }, {
+    "name" : "thread",
+    "value" : "15380-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_three"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "1"
+  }, {
+    "name" : "b",
+    "value" : "1.0"
+  }, {
+    "name" : "result",
+    "value" : "2.0"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e504663334a95257.json",
+  "parameterValues" : [ "1", "1.0", "2.0" ]
+}

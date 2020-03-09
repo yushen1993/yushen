@@ -1,0 +1,58 @@
+{
+  "uid" : "dda8417c938e3e7d",
+  "name" : "test_add[1-hi-unsupported operand type(s) for +: 'int' and 'str']",
+  "fullName" : "test_three#test_add",
+  "historyId" : "5c28a4652f681e05b9a38963ce5efbaa",
+  "time" : {
+    "start" : 1583300091265,
+    "stop" : 1583300092265,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "suite",
+    "value" : "test_three"
+  }, {
+    "name" : "host",
+    "value" : "rongyi-yotng"
+  }, {
+    "name" : "thread",
+    "value" : "15380-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_three"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "a",
+    "value" : "1"
+  }, {
+    "name" : "b",
+    "value" : "'hi'"
+  }, {
+    "name" : "result",
+    "value" : "'unsupported operand type(s) for +: 'int' and 'str''"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "dda8417c938e3e7d.json",
+  "parameterValues" : [ "1", "'hi'", "'unsupported operand type(s) for +: 'int' and 'str''" ]
+}

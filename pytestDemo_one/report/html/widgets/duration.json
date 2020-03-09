@@ -1,0 +1,91 @@
+[ {
+  "uid" : "9b16fc94140bddc9",
+  "name" : "test_add[1.0-wuya-unsupported operand type(s) for +: 'float' and 'str']",
+  "time" : {
+    "start" : 1583300092298,
+    "stop" : 1583300093299,
+    "duration" : 1001
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d6134717bd03122a",
+  "name" : "test_add[1-1-2]",
+  "time" : {
+    "start" : 1583300083876,
+    "stop" : 1583300084876,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ec33cb84cd44eb47",
+  "name" : "test_add[1.0-1.0-2.0]",
+  "time" : {
+    "start" : 1583300085081,
+    "stop" : 1583300086081,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "27d3d64990967af6",
+  "name" : "test_add[1-0-1]",
+  "time" : {
+    "start" : 1583300087141,
+    "stop" : 1583300088141,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dda8417c938e3e7d",
+  "name" : "test_add[1-hi-unsupported operand type(s) for +: 'int' and 'str']",
+  "time" : {
+    "start" : 1583300091265,
+    "stop" : 1583300092265,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "63e5bfde2455e99c",
+  "name" : "test_add[hi -wuya-hi wuya]",
+  "time" : {
+    "start" : 1583300089200,
+    "stop" : 1583300090200,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ba65ea598877dd01",
+  "name" : "test_add[0--unsupported operand type(s) for +: 'int' and 'str']",
+  "time" : {
+    "start" : 1583300090230,
+    "stop" : 1583300091230,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8b4f67f5423e6211",
+  "name" : "test_add[--]",
+  "time" : {
+    "start" : 1583300088171,
+    "stop" : 1583300089172,
+    "duration" : 1001
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e504663334a95257",
+  "name" : "test_add[1-1.0-2.0]",
+  "time" : {
+    "start" : 1583300086110,
+    "stop" : 1583300087110,
+    "duration" : 1000
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
